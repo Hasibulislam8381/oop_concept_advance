@@ -8,7 +8,6 @@
        $this->color=$color; 
     }
     public function result(){
-
         return "The brand is" . $this->brand." ". "and color is".$this->color;
     }
   }
