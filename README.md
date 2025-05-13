@@ -164,3 +164,19 @@ $admin = new Admin();
 $admin->log("Admin logged in");
 ?>
 ```
+
+### 🔹 Abstract Class and method
+
+### 🔹 Object
+
+An **abstract** class is a class that contains at least one abstract method. An abstract method is a method that is declared, but not implemented in the code.
+An abstract class or method is defined with the abstract keyword
+
+**Explanations**
+-The method in the child must have the same name as in the abstract class.
+
+-The method must use the same or a less restricted access modifier (e.g., protected can become protected or public, but not private).
+
+-The number and type of required arguments must match the abstract method.
+
+-The child method can include additional optional arguments.
