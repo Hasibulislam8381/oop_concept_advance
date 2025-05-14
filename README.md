@@ -212,3 +212,11 @@ An abstract class or method is defined with the abstract keyword
    $marchedes = new Marchedes("Marchedes");
    $marchedes->intro();
 ```
+
+**Interface**
+An interface is like a blueprint that tells a class what methods it must have — but it doesn't say how to do them.
+
+**Enplanations**
+Imagine you’re making a remote control interface. You say:
+"Every remote must have a turnOn() and turnOff() button."
+You don’t care how the remote turns things on or off — just that it has those buttons.
