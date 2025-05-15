@@ -220,3 +220,71 @@ An interface is like a blueprint that tells a class what methods it must have �
 Imagine you’re making a remote control interface. You say:
 "Every remote must have a turnOn() and turnOff() button."
 You don’t care how the remote turns things on or off — just that it has those buttons.
+**Examples**
+
+    ```php
+
+class fruit{
+    public $name;
+    public $color;
+
+    public function __construct($name,$color)
+    {
+       $this->name=$name;
+       $this->color=$color; 
+    }
+    public function intro(){
+        echo "The fruit name is {$this->name} and the color is {$this->color}";
+    }
+}
+
+class apple extends fruit{
+    public function message(){
+        echo "I am a apple";
+    }
+}
+
+$apple=new apple("Apple","Red");
+$apple->message();
+$apple->intro();
+```
+
+### 🔹 Static Class and method
+
+**Static Method**
+Static methods can be called directly - without creating an instance of the class first.
+Static methods are declared with the static keyword:
+**Key Concept**
+  A class might have both static and non static method . A static method can be accessed in a method in a same class with **self**
+  keyword
+
+**Example**
+```php 
+class Dog
+{
+    public static function color()
+    {
+        echo "The Dog color is Red";
+    }
+    public function __construct()
+    {
+        self::color();
+    }
+}
+
+new Dog();
+```
+**Static Properties**
+Static properties can be called directly - without creating an instance of a class.
+Static properties are declared with the static keyword:
+ ```php
+class pi {
+  public static $value = 3.14159;
+}
+
+// Get static property
+echo pi::$value;
+```
+
+**keyConcept**
+A class can have both static and non-static properties. A static property can be accessed from a method in the same class using the self keyword and double colon(::)
