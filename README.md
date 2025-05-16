@@ -244,3 +244,65 @@ You don’t care how the remote turns things on or off — just that it has thos
   echo "<br>";
   $remote->turnOn("LG");
 ```
+
+### 🔹 Static Methods and Properties
+
+Static methods can be called directly - without creating an instance of the class first.
+Static methods are declared with the static keyword:
+
+```php
+class Gog
+{
+    public static function deshi()
+    {
+        echo "ssds";
+    }
+}
+Gog::deshi();
+```
+
+**Explanations**
+A class can have both static and non-static methods. A static method can be accessed from a method in the same class using the self keyword and double colon (::):
+
+```php
+class Dog
+{
+    public static function color()
+    {
+        echo "The Dog color is Red";
+    }
+    public function __construct()
+    {
+        self::color();
+    }
+}
+
+new Dog();
+```
+
+**Static Properties**
+Static properties can be called directly - without creating an instance of a class.
+Static properties are declared with the static keyword:
+
+```php
+class pi {
+  public static $value = 3.14159;
+}
+
+// Get static property
+echo pi::$value;
+```
+
+A class can have both static and non-static properties. A static property can be accessed from a method in the same class using the self keyword and double colon (::)
+
+```php
+class pi {
+  public static $value=3.14159;
+  public function staticValue() {
+    return self::$value;
+  }
+}
+
+$pi = new pi();
+echo $pi->staticValue();
+```
