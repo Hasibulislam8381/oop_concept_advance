@@ -266,3 +266,7 @@ class pi {
 $pi = new pi();
 echo $pi->staticValue();
 ```
+
+**Method Overloading**
+Method overloading is a concept that allows you to have a method that can perform differently based on its number of parameters. It allows you have multiple definitions for a same method in the same class.
+PHP supports method overloading using a magic keyword, **\_\_call**.
