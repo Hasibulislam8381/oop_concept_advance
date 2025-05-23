@@ -270,3 +270,30 @@ echo $pi->staticValue();
 **Method Overloading**
 Method overloading is a concept that allows you to have a method that can perform differently based on its number of parameters. It allows you have multiple definitions for a same method in the same class.
 PHP supports method overloading using a magic keyword, **\_\_call**.
+
+```php
+class SampleClass{
+    function __call($name, $arguments)
+    {
+        $count=count($arguments);
+        if($name=='add'){
+            if ($count == 2) {
+                return array_sum($arguments);
+            } else if ($count == 3) {
+                return array_sum($arguments) > 10 ? 10 : array_sum($arguments);
+            }
+        }
+    }
+}
+$sampleObject = new SampleClass;
+echo $sampleObject->add(12, 12) . PHP_EOL; // Outputs 24
+echo $sampleObject->add(12, 2, 6) . PHP_EOL; // Outputs 10
+
+```
+
+**Namespace**
+
+When we want to call multiple class with same in a single file it causes error . Using namespace we can solve that.
+
+1.They allow for better organization by grouping classes that work together to perform a task
+2They allow the same name to be used for more than one class
