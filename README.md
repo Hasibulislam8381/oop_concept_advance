@@ -297,3 +297,9 @@ When we want to call multiple class with same in a single file it causes error .
 
 1.They allow for better organization by grouping classes that work together to perform a task
 2They allow the same name to be used for more than one class
+
+```php
+require 'bkashPayment.php';
+require 'nogodPayment.php';
+$obj= new bkash\Payment();
+```
