@@ -303,3 +303,12 @@ require 'bkashPayment.php';
 require 'nogodPayment.php';
 $obj= new bkash\Payment();
 ```
+
+### 🔹 include,require,include_once,require_once
+
+--include:Includes and evaluates the specified file .If the file is not found, it emits a warning (E_WARNING) and the script continues to execute.
+
+--require: Same as include, but used for essential files. If the file is not found, it emits a fatal error (E_COMPILE_ERROR) and the script stops execution.
+
+--include_once: Same as include, but ensures the file is included only once, even if called multiple times.Emits a warning if the file is not found, script continues.
+--require_once:Same as require, but ensures the file is included only once. Emits a fatal error if the file is not found, script stops.
