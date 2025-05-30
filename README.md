@@ -312,3 +312,10 @@ $obj= new bkash\Payment();
 
 --include_once: Same as include, but ensures the file is included only once, even if called multiple times.Emits a warning if the file is not found, script continues.
 --require_once:Same as require, but ensures the file is included only once. Emits a fatal error if the file is not found, script stops.
+
+### 🔹 Session
+      Session are used to Store data on the server side . Use to track user state
+
+### 🔹 Cookies
+       Cookies are used  to store data on client side . exmp:remember login info
+
