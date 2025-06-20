@@ -291,6 +291,29 @@ echo $sampleObject->add(12, 2, 6) . PHP_EOL; // Outputs 10
 
 ```
 
+**Method Overriding**
+Method overriding occurs when a child class provides a specific implementation of a method that is already defined in its parent class.
+
+```php
+class ParentClass {
+    public function greet() {
+        echo "Hello from Parent Class";
+    }
+}
+
+class ChildClass extends ParentClass {
+    // This overrides the greet() method from the ParentClass
+    public function greet() {
+        echo "Hello from Child Class";
+    }
+}
+
+$obj = new ChildClass();
+$obj->greet(); // Output: Hello from Child Class
+
+
+```
+
 **Namespace**
 
 When we want to call multiple class with same in a single file it causes error . Using namespace we can solve that.
@@ -314,8 +337,9 @@ $obj= new bkash\Payment();
 --require_once:Same as require, but ensures the file is included only once. Emits a fatal error if the file is not found, script stops.
 
 ### 🔹 Session
+
       Session are used to Store data on the server side . Use to track user state
 
 ### 🔹 Cookies
-       Cookies are used  to store data on client side . exmp:remember login info
 
+       Cookies are used  to store data on client side . exmp:remember login info
