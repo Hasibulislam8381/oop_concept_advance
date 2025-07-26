@@ -369,3 +369,32 @@ echo $account->getBalance(); // Output: 1000
 // $account->balance = 100000; ❌ এটা করা যাবে না, কারণ private
 
 ```
+
+**Polimorphism**
+"Polymorphism হচ্ছে OOP-এর একটি concept, যেখানে আমরা একই interface বা parent class ব্যবহার করে বিভিন্ন class-এ আলাদা behavior define করি। এতে কোডে flexibility বাড়ে এবং আমরা loosely coupled code লিখতে পারি। Laravel এ polymorphic relationship এর মাধ্যমে এটি ব্যবহার হয়।"
+
+```
+interface Animal {
+    public function makeSound();
+}
+
+class Dog implements Animal {
+    public function makeSound() {
+        echo "Woof!";
+    }
+}
+
+class Cat implements Animal {
+    public function makeSound() {
+        echo "Meow!";
+    }
+}
+
+// Polymorphism
+function printSound(Animal $animal) {
+    $animal->makeSound();
+}
+
+printSound(new Dog()); // Woof!
+printSound(new Cat()); // Meow!
+```
