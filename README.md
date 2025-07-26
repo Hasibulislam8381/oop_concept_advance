@@ -343,3 +343,29 @@ $obj= new bkash\Payment();
 ### 🔹 Cookies
 
        Cookies are used  to store data on client side . exmp:remember login info
+
+**Encapsulation**
+Encapsulation হলো OOP-এর একটি principle যেখানে data (properties) এবং সেই data-র সাথে কাজ করার method (function) গুলোকে একসাথে একটি class-এর ভিতরে বন্ধ করে রাখা হয় এবং বাইরের কেউ চাইলেও সরাসরি সেই data-তে access করতে না পারে।
+
+```
+class BankAccount {
+    private $balance = 0; // balance লুকানো হলো
+
+    public function deposit($amount) {
+        if ($amount > 0) {
+            $this->balance += $amount;
+        }
+    }
+
+    public function getBalance() {
+        return $this->balance;
+    }
+}
+
+$account = new BankAccount();
+$account->deposit(1000);
+echo $account->getBalance(); // Output: 1000
+
+// $account->balance = 100000; ❌ এটা করা যাবে না, কারণ private
+
+```
